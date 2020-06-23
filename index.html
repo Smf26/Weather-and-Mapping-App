@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Weather Application">
+  <meta name="keywords" content="HTML, CSS, XML, JavaScript">
+  <meta name="author" content="Shepherd Magwagwa || Web Application Developer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>Weather Aoi</title>
+</head>
+<body>
+  <!-- ==================== -->
+  <header>
+    <h1>Weather Application & Map Positioning</h1>
+  </header>
+  <!-- ==================== -->
+  <main>
+    <div class="time"><p id="time"></p></div>
+    <div id="content-wrap">
+      <div class="row weather">
+        <div id="data-view"></div>
+        
+      </div>
+      <!-- -------------- -->
+      <div class="row mapp">
+        <div id="map"></div>
+      </div>
+    </div>
+    <!-- ================= -->
+    <div id="weather-input" class="winput">
+      <div id="input">
+        <input type="text" id="city-input1" placeholder="Enter your city" required>
+      </div>
+      <div class="btn">
+        <button id="btn1" class="submit" type="submit">SUBMIT</button>
+      </div>
+    </div>
+  </main>
+  <!-- ==================== -->
+  <footer>
+    <p>World Weather App 2020 - V 1.0.1</p>
+  </footer>
+  <!-- ==================== -->
+
+
+<script async defer 
+  src="https://maps.googleapis.com/maps/api/js?key=API_KEY">
+</script>
+<script src="main.js"></script>
+</body>
+</html>

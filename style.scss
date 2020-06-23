@@ -1,0 +1,235 @@
+// Font import
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&family=Pacifico&display=swap');
+
+// Variables
+$primary-color: #3D6D95;
+$secondary-color: #78A9CA;
+$text-color: #A4BFD7; 
+$text-colorr: hsla(180, 2%, 11%, 0.678);
+$navsTextColor: rgba(22, 21, 21, 0.794);
+// ================== Body =======================
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 12vh auto 10vh;
+  min-height: 100vh;
+}
+//div {border: 1px solid ;} //#3E6B94
+// ================= Header ======================
+header {
+  background-color: $primary-color;
+  h1 {
+    text-align: center;
+    font-size: 2.4vw;
+    font-family: 'Exo 2', sans-serif;
+    color: $navsTextColor;  
+  }
+}
+// ================= Main ========================
+main {
+  background-color: $secondary-color;
+  background-image: url('./images/forecast.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: max-content auto;
+  gap: .2em;
+  justify-items: center;
+  padding-top: .2em;
+  font-family: 'Exo 2', sans-serif;
+  .time {
+    text-align: center;
+    width: 80%;
+    border: 3px solid #3E6B94;
+    border-radius: .3em;
+  }
+  .container {
+    display: grid;
+    width: 99.5%;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: .2em;
+    .border-style {
+      border: 3px solid #3E6B94;
+    }
+    .weather {
+      padding: .2em 0;
+      min-height: 77.4vh;
+      display: grid;
+      grid-template-rows: 1fr max-content;
+      justify-items: center;
+      align-items: center;
+      gap: .2em;
+      #data-view {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 80%;
+        border-radius: .4em;
+        text-align: center;
+      }
+      
+    }
+    .mapp {
+      display: grid;
+      justify-items: center;
+      //align-items: center;
+      padding-top: 2.4em;
+      min-height: 78vh;
+      #map {
+        width: 80%;
+        height: 90%;
+        border-radius: .5em;
+      }
+    }
+  }
+  #weather-input {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    height: max-content;
+    #input {
+      display: grid;
+      justify-items: center;
+      padding: .4em 0;
+      input[type=text] {
+        width: 40vw;
+        height: 5vh;
+        margin: 10px;
+        background-color: hsl(208, 47%, 86%);
+        border: 3px solid #3E6B94;
+        border-radius: 10px;
+        text-align: center;
+      }
+    }
+    .btn {
+      padding: 0.2em 0;
+      .submit {
+        display: inline-block;
+        width: 20vw;
+        font-family: 'Exo 2', sans-serif;
+        font-weight: 600;
+        color: $navsTextColor;
+        padding: .8em;
+        border-radius: 20px;
+        background-color: #3E6B94;
+        border: hsl(225, 87%, 47%);
+        &:hover {
+          background-color: #80A6CB;
+          color: white;
+        }
+      }
+    }
+  }
+}
+// ================= Footer ==================
+footer {
+  background-color: $primary-color;
+  p {
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+    color: $navsTextColor;
+  }
+}
+
+// Media Queries
+@media (min-width: 362px) and (max-width: 768px) {
+  main {
+    .container {
+      .border-style {
+        border: 3px solid #3E6B94;
+      }
+      .weather {
+        min-height: 77.4vh;
+        #data-view {
+          width: 80%;
+        }
+        
+      }
+    }
+    #weather-input {
+      text-align: center;
+      display: grid;
+      justify-content: center;
+      height: max-content;
+      #input {
+        display: grid;
+        justify-items: center;
+        padding: .4em 0;
+        input[type=text] {
+          width: 40vw;
+          height: 5vh;
+          margin: 10px;
+          padding: .5em;
+        }
+      }
+      .btn {
+        padding: 0.2em 0;
+        .submit {
+          display: inline-block;
+          width: 30vw;
+        }
+      }
+    }
+  }
+  footer {
+    height: max-content;
+    p {
+      padding-bottom: .2em;
+      font-size: 2vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  header {
+    h1 {
+      font-size: 5.6vw;
+    }
+  }
+  main {
+    .time {
+      width: 90%;
+      p {
+        font-size: 3.8vw;
+      }
+    }
+    .container {
+      .weather {
+        min-height: 77.4vh;
+        #data-view {
+          width: 80%;
+        }
+      }
+    }
+    #weather-input {
+      text-align: center;
+      display: grid;
+      justify-content: center;
+      height: max-content;
+      #input {
+        display: grid;
+        justify-items: center;
+        padding: .4em 0;
+        input[type=text] {
+          width: 70vw;
+          height: 5vh;
+          margin: 10px;
+          padding: .5em;
+        }
+      }
+      .btn {
+        padding: 0.2em 0;
+        .submit {
+          display: inline-block;
+          width: 50vw;
+        }
+      }
+    }
+  }
+  footer {
+    p {
+      font-size: 4vw;
+    }
+  }
+}

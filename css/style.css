@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@500&family=Pacifico&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 12vh auto 10vh;
+  min-height: 100vh; }
+
+header {
+  background-color: #3D6D95; }
+  header h1 {
+    text-align: center;
+    font-size: 2.4vw;
+    font-family: 'Exo 2', sans-serif;
+    color: rgba(22, 21, 21, 0.794); }
+
+main {
+  background-color: #78A9CA;
+  background-image: url("./images/forecast.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: max-content auto;
+  gap: .2em;
+  justify-items: center;
+  padding-top: .2em;
+  font-family: 'Exo 2', sans-serif; }
+  main .time {
+    text-align: center;
+    width: 80%;
+    border: 3px solid #3E6B94;
+    border-radius: .3em; }
+  main .container {
+    display: grid;
+    width: 99.5%;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: .2em; }
+    main .container .border-style {
+      border: 3px solid #3E6B94; }
+    main .container .weather {
+      padding: .2em 0;
+      min-height: 77.4vh;
+      display: grid;
+      grid-template-rows: 1fr max-content;
+      justify-items: center;
+      align-items: center;
+      gap: .2em; }
+      main .container .weather #data-view {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 80%;
+        border-radius: .4em;
+        text-align: center; }
+    main .container .mapp {
+      display: grid;
+      justify-items: center;
+      padding-top: 2.4em;
+      min-height: 78vh; }
+      main .container .mapp #map {
+        width: 80%;
+        height: 90%;
+        border-radius: .5em; }
+  main #weather-input {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    height: max-content; }
+    main #weather-input #input {
+      display: grid;
+      justify-items: center;
+      padding: .4em 0; }
+      main #weather-input #input input[type=text] {
+        width: 40vw;
+        height: 5vh;
+        margin: 10px;
+        background-color: #cbdcec;
+        border: 3px solid #3E6B94;
+        border-radius: 10px;
+        text-align: center; }
+    main #weather-input .btn {
+      padding: 0.2em 0; }
+      main #weather-input .btn .submit {
+        display: inline-block;
+        width: 20vw;
+        font-family: 'Exo 2', sans-serif;
+        font-weight: 600;
+        color: rgba(22, 21, 21, 0.794);
+        padding: .8em;
+        border-radius: 20px;
+        background-color: #3E6B94;
+        border: #1044e0; }
+        main #weather-input .btn .submit:hover {
+          background-color: #80A6CB;
+          color: white; }
+
+footer {
+  background-color: #3D6D95; }
+  footer p {
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+    color: rgba(22, 21, 21, 0.794); }
+
+@media (min-width: 362px) and (max-width: 768px) {
+  main .container .border-style {
+    border: 3px solid #3E6B94; }
+  main .container .weather {
+    min-height: 77.4vh; }
+    main .container .weather #data-view {
+      width: 80%; }
+  main #weather-input {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    height: max-content; }
+    main #weather-input #input {
+      display: grid;
+      justify-items: center;
+      padding: .4em 0; }
+      main #weather-input #input input[type=text] {
+        width: 40vw;
+        height: 5vh;
+        margin: 10px;
+        padding: .5em; }
+    main #weather-input .btn {
+      padding: 0.2em 0; }
+      main #weather-input .btn .submit {
+        display: inline-block;
+        width: 30vw; }
+  footer {
+    height: max-content; }
+    footer p {
+      padding-bottom: .2em;
+      font-size: 2vw; } }
+
+@media only screen and (max-width: 360px) {
+  header h1 {
+    font-size: 5.6vw; }
+  main .time {
+    width: 90%; }
+    main .time p {
+      font-size: 3.8vw; }
+  main .container .weather {
+    min-height: 77.4vh; }
+    main .container .weather #data-view {
+      width: 80%; }
+  main #weather-input {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    height: max-content; }
+    main #weather-input #input {
+      display: grid;
+      justify-items: center;
+      padding: .4em 0; }
+      main #weather-input #input input[type=text] {
+        width: 70vw;
+        height: 5vh;
+        margin: 10px;
+        padding: .5em; }
+    main #weather-input .btn {
+      padding: 0.2em 0; }
+      main #weather-input .btn .submit {
+        display: inline-block;
+        width: 50vw; }
+  footer p {
+    font-size: 4vw; } }

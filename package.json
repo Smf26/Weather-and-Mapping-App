@@ -1,0 +1,28 @@
+{
+  "name": "weatherapi",
+  "version": "1.0.0",
+  "description": "World Cities weather application and map positioning",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "gulp watch",
+    "build": "gulp build"
+  },
+  "keywords": [
+    "Html",
+    "Css",
+    "Javascript",
+    "Weather Api"
+  ],
+  "author": "Shepherd Magwagwa",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify-es": "^2.0.0",
+    "node-sass": "^4.14.1"
+  }
+}
